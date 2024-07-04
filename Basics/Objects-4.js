@@ -6,6 +6,8 @@
 // for real world data
 // objects store key value pairs
 // objects don't have index
+// objects can be iterated easily using for in loop
+// object creates array of keys 
 
 // how to create object
 // const person={name:"Anu",age:19};
@@ -57,6 +59,7 @@
 //     console.log(key," : ",person[key]);
 // }
 
+// object creates array of keys
 // console.log(typeof(Object.keys(person)),Object.keys(person));
 // const val=Array.isArray((Object.keys(person)));
 // console.log(val);
@@ -89,7 +92,7 @@
 // Spread Operator (note only strings are iterable numbers are not iterable)
 // const array1=[1,2,3];
 // const array2=[4,5,6];
-// // const newArray=[...array1,...array2,34,56];
+// // const newArray=[...array1,...array2,34,56]; // cloning and adding stuff in new array 
 // // const newArray=[..."abc"];
 // const newArray=[..."1234567890"];
 // console.log(newArray);
@@ -110,7 +113,7 @@
 //         key3:"value3",
 //         key4:"value4"
 //     };
-// const newObject1={...obj2,...obj1};
+// const newObject1={...obj2,...obj1}; // one which comes after/later has dominating value
 // const newObject2={...obj1,...obj2};
 // console.log(newObject1);
 // console.log(newObject2);
@@ -146,52 +149,19 @@
 // }
 
 // Nested Destructuring
-// const users=[
-//     {userId:1,firstName:'anushka',gender:'female'},
-//     {userId:2,firstName:'abc',gender:'male'},
-//     {userId:3,firstName:'xyz',gender:'female'},
-// ]
+const users=[
+    {userId:1,firstName:'anushka',gender:'female'},
+    {userId:2,firstName:'abc',gender:'male'},
+    {userId:3,firstName:'xyz',gender:'female'},
+]
 // // const [user1,user2,user3]=users;
 // // console.log(user1);
-// // const [{firstName}, ,{gender}]=users;
+// // const [{firstName}, ,{gender}]=users; // {user1fname},,{user3gender}
 // // console.log(firstName);
 // // console.log(gender);
-// const [{firstName:user1firstName,userId}, ,{gender:user3gender}]=users;
-// console.log(user1firstName);
-// console.log(userId);
-// console.log(user3gender);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const [{firstName:user1firstName,userId}, ,{gender:user3gender}]=users; // {user1fname,user1Id},,{user3gender}
+console.log(user1firstName);
+console.log(userId);
+console.log(user3gender);
 
 

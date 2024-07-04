@@ -55,11 +55,6 @@
 // console.log(AreaOfCircle(2));
 
 // Arrow Functions
-// const singHappyBirthday=function(){
-//     console.log("Happy Birthday To You...");
-// }
-// singHappyBirthday();
-
 // const singHappyBirthday=()=>{
 //     console.log("Happy Birthday To You...");
 // }
@@ -129,20 +124,20 @@
 //     function myFunc(){
 //         const myVar="value59";
 //         const myFunc2=()=>{
-//         console.log("inside myFunc",myVar);
+//         console.log("inside myFunc",myVar); //3
 //         }
 //         myFunc2();
 //     }
-//     console.log(myVar);
-//     myFunc();
+//     console.log(myVar); //1
+//     myFunc(); //2
 // }
 // myApp();
 
-// block scope vs function scope
-// let and const are block scope
-// var is function scope
+// // block scope vs function scope
+// // let and const are block scope
+// // var is function scope
 // {
-//     let firstName="anushka"; //let is accessible outside block
+//     let firstName="anushka"; //let is not accessible outside block
 // }
 // console.log(firstName);
 // {
@@ -158,7 +153,6 @@
 //     return a+b;
 // }
 // console.log(add(4));
-
 // function add(a,b=0){
 //     return a+b;
 // }
@@ -212,24 +206,24 @@
 // myFunc(myFunc2);
 
 // function myFunc2(name){
-//     console.log("inside myFunc2");
-//     console.log(`your name is ${name}`);
+//     console.log("inside myFunc2"); //2
+//     console.log(`your name is ${name}`); //3
 // }
 // function myFunc(Callback){
-//     console.log("inside myFunc");
-//     Callback("Anushka");
+//     console.log("inside myFunc"); //1
+//     Callback("Anushka"); 
 // }
 // myFunc(myFunc2);
 
 // Function returning function
-// function myFunc(){
-//     function myFunc2(){
-//         return "hello world";
-//     }
-//     return myFunc2;
-// }
-// const ans=myFunc();
-// console.log(ans());
+function myFunc(){  //3
+    function myFunc2(){ //5
+        return "hello world";  //6
+    }
+    return myFunc2;  //4
+}
+const ans=myFunc(); //2
+console.log(ans()); //1
 
 
 

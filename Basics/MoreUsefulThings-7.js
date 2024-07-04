@@ -41,7 +41,7 @@
 // console.log(numbers);
 // console.log(numbers[2]);
 
-// // const items=['item1','item2','item3'];
+// const items=['item1','item2','item3'];
 // const numbers=new Set();
 // numbers.add(1);
 // numbers.add(2);
@@ -50,23 +50,27 @@
 // numbers.add(5);
 // numbers.add(6);
 // numbers.add(7);
-// // numbers.add(items);
-// // numbers.add(items);
+// numbers.add(items);
+// numbers.add(items);
 // numbers.add(['item1','item2']);
 // numbers.add(['item1','item2']);
-// // if(numbers.has(1)){
-// //     console.log("1 is present");
-// // }else{
-// //     console.log("1 is absent");
-// // }
-// // console.log(numbers);
+
+// // not working .has() method
+// if(numbers.has(1)){
+//     console.log("1 is present");
+// }else{
+//     console.log("1 is absent");
+// }
+
+// console.log(numbers);
 // for(let number of  numbers){
 //     console.log(number);
 // }
+
 // const myArray=[1,2,4,4,5,6,5,6];
 // const uniqueElements=new Set(myArray);
 // console.log(uniqueElements);
-// // console.log(uniqueElements.length);
+// // console.log(uniqueElements.length); // undefined
 // console.log(myArray);
 // let length=0;
 // for(let element of uniqueElements){
@@ -101,6 +105,7 @@
 // key -> any type
 // map has set and get method to add and access the values
 // key value pair
+
 // const person=new Map();
 // // console.log(typeof person);
 // person.set('firstName','Anushka');
@@ -146,10 +151,10 @@
 // const extraInfo=new Map();
 // extraInfo.set(person1,{age:8,gender:"female"});
 // extraInfo.set(person2,{age:10,gender:"female"});
-// // console.log(extraInfo);
+// console.log(extraInfo);
 // console.log(person1.id);
 // console.log(person2.id);
-// console.log(extraInfo.get(person2).id);
+// console.log(extraInfo.get(person2).id); //undefined
 // console.log(extraInfo.get(person1).gender);
 // console.log(extraInfo.get(person2).age);
 
@@ -163,20 +168,23 @@
 // obj.key3="value3";
 // console.log(obj);
 // console.log(obj2);
-// actual cloning
-// const obj2={...obj}; //method1
-// const obj2=Object.assign({},obj); //method2
 
+// Actual cloning
+// const obj2={...obj}; //method1 - destructuring
+// const obj2=Object.assign({},obj); //method2
+// obj.key3="value3";
+// console.log(obj);
+// console.log(obj2);
 
 // Optional chaining
-
 // const user={
 //     firstName:"Anushka",
-//     address:{houseNumber:'1234'} //if this line is absent then accessing the address.houseNumber can give error to avoid that use ?. instead of .
+//     address:{houseNumber:'1234'} //if this line is absent then accessing the address.houseNumber or user.address can give error to avoid that use ?. instead of .
 // }
 // console.log(user.firstName);
-// console.log(user.address);
-// console.log(user.address.houseNumber);
-// console.log(user?.address?.houseNumber);
+// console.log(user.address); // error
+// console.log(user?.address); // undefined
+// console.log(user.address.houseNumber); // error
+// console.log(user?.address?.houseNumber);  // undefined
 
 

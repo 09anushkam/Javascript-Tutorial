@@ -29,7 +29,7 @@
 
 // let keyword (most recommended)
 // let firstName="Anushka";
-// firstName="Anu"; //error - block scope vs function scope
+// firstName="Anu"; //error - block scope (let) vs function scope (var)
 // console.log(firstName);
 
 //declare constants
@@ -56,7 +56,7 @@
 // console.log(newString);
 
 // typeof operator
-// data types (primitive data types)
+// data types (primitive data types - original values remains unchanged even after copying and modifying it into new variables)
 // string "xyz"
 // number 2,3,4.5
 // booleans
@@ -69,6 +69,8 @@
 // let firstName="anushka";
 // console.log(typeof age);
 // console.log(typeof firstName);
+
+// method 1 for string and number conversion
 // covert number to string method1
 // console.log(typeof(age+""));
 // convert string to number
@@ -89,11 +91,11 @@
 // console.log(fullName);
 // let string1="17";
 // let string2="10";
-// let newString=+string1 + +string2;
-// console.log(typeof newString);
-// console.log(newString);
+// let newString=+string1 + +string2; 
+// console.log(typeof newString); // number
+// console.log(newString); // 27
 
-// template string ${}
+// template string `${}` or just template literals / backticks ``
 // let age=19;
 // let firstName="Anushka";
 // // "my name is Anushka and my age is 19"
@@ -101,13 +103,13 @@
 // let aboutMe=`my name is ${firstName} and my age is ${age}`;
 // console.log(aboutMe);
 
-// undefined
+// undefined - no value means undefined 
 // let firstName;
 // console.log(typeof firstName,firstName);
 // firstName="anu";
 // console.log(typeof firstName,firstName);
 
-// null
+// null - it's a value
 // let myVariable=null;
 // console.log(myVariable);
 // myVariable="xyz";
@@ -123,13 +125,10 @@
 // let num1=7;
 // let num2="7";
 // console.log(num1>num2);
-// console.log(num1==num2); //cares about value only
-// console.log(num1===num2); //cares about value and datatype both
-// console.log(num1!=num2); //cares about value only
-// console.log(num1!==num2); //cares about value and datatype both
-
-
-
+// console.log(num1==num2); // == - cares about value only
+// console.log(num1===num2); // === - cares about value and datatype both
+// console.log(num1!=num2); // != - cares about value only
+// console.log(num1!==num2); // !== - cares about value and datatype both
 
 
 

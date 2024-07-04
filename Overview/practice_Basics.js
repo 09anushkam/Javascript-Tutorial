@@ -97,6 +97,7 @@
 // fruits[1] = "banana"; //replaces mango
 // console.log(fruits);
 // console.log(Array.isArray(fruits)); //to check if given data is in array or not
+// note - typeof [] is same as typeof {} i.e. object thus we use Array.isArray() method to check if given element is array or not
 
 // 27.js 
 // // push-adds at the last,pop-deletes from the last,unshift-adds at the start,shift-deletes from the start
@@ -112,6 +113,7 @@
 // console.log("value is num1 is", num1);
 // console.log("value is num2 is", num2);
 // // reference types eg. array - original value gets changed
+// // note - [], (), {} are reference datatypes
 // let array1 = ["item1", "item2"];
 // let array2 = array1;
 // console.log("array1", array1);
@@ -129,7 +131,7 @@
 // // let array2 = [].concat(array1,["item3", "item4"]); //2
 // // new way - spread operator
 // let oneMoreArray = ["item3", "item4"];
-// let array2 = [...array1, ...oneMoreArray]; //3
+// let array2 = [...array1, ...oneMoreArray]; //3 <- most imp and preferable way of cloning an array
 // array1.push("item3");
 // console.log(array1===array2);
 // console.log(array1);
@@ -157,12 +159,15 @@
 // console.log(fruits);
 
 // 35.js -  array destructuring 
-// const myArray = ["value1", "value2", "value3","value4"];
-// // let myvar1 = myArray[0];
-// // let myvar2 = myArray[1];
-// let [myvar1, myvar2, ...myNewArray] = myArray;
-// console.log("value of myvar1", myvar1);
-// console.log("value of myvar2", myvar2);
+// const myArray=["value1","value2","value3","value4"];
+// let myVar1=myArray[0];    // value1
+// let myVar2=myArray[1];    // value2
+// let [myVar1,myVar2]=myArray;       // value1 and value2
+// let [myVar1, ,myVar2]=myArray;     // value1 and value3
+// let myNewArray=myArray.slice(2);   // value3 and value4
+// let [myVar1,myVar2,...myNewArray]=myArray; // destructuring
+// console.log("value of myVar1",myVar1);
+// console.log("value of myVar2",myVar2);
 // console.log(myNewArray);
 
 // 36.js - objects
@@ -314,15 +319,12 @@
 // singHappyBirthday();
 
 
-// 47.js - hoisting UNCLEAR
+// 47.js - hoisting - if u call a function above function declaration it will work but that is not true in case of function expression and arrow function
 // hello();
 // function hello(){
 //     console.log("hello world");
 // }
 // console.log(hello);
-// const hello = "hello world";
-// console.log(hello);
-
 
 // 49.js
 // lexical scope 

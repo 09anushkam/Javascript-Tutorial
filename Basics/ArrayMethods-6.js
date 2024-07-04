@@ -2,7 +2,7 @@
 
 // important array methods
 
-// forEach method
+// forEach method - iteration
 // const numbers=[4,2,5,8];
 // function myFunc(number,index){
 //     console.log(`index is ${index},number is ${number}`);
@@ -39,7 +39,7 @@
 // }
 
 
-// MAP method
+// MAP method - modifies array and stores it' new value in new array
 // map makes new array of the return value of the function which is it's input
 
 // const numbers=[3,4,5,6,7,8];
@@ -73,7 +73,7 @@
 // });
 // console.log(userNames);
 
-// filter method
+// filter method - filter outs values based on some condition
 // const numbers=[1,3,2,6,4,8];
 
 // const isEven=function(number){
@@ -87,10 +87,11 @@
 // });
 // console.log(evenNumbers);
 
-// Reduce method
+// Reduce method - UNCLEAR
 
 // const numbers=[1,2,3,4,5];
 // const sum=numbers.reduce((accumulator,cuurentValue)=>{
+//     console.log(accumulator,cuurentValue)
 //     return accumulator+cuurentValue;
 // });
 // console.log(sum);
@@ -195,12 +196,13 @@
 // filter-creates new array with filtered values
 
 
-// sort()
+// sort() - sorts based on ascii value of 1st no.
 
 // const numbers=[5,9,1200,410,3000];
 // console.log(numbers.sort());
 // ascending
 // numbers.sort((a,b)=>{
+//     console.log(a,b)
 //     return a-b;
 // });
 // numbers.sort((a,b)=>a-b);
@@ -276,7 +278,7 @@
 // const lessthan30k=userCart.every((cartItem)=>cartItem.price<30000);
 // console.log(lessthan30k);
 
-// some method
+// some method - returns boolean
 // const numbers=[3,5,8,9];
 // const ans=numbers.some((number)=>number%2===0);
 // console.log(ans);
@@ -294,7 +296,7 @@
 // value,start,end
 
 // const myArray=new Array(3).fill(0);
-// console.log(myArray);  //array with all(10) elem as 0
+// console.log(myArray);  //array with all(3) elem as 0
 
 // const myArray=[1,2,3,4,5,6,7,8];
 // myArray.fill(0,2,5);
@@ -304,19 +306,19 @@
 // splice method - changes original array
 // start,delete,insert
 
-const myArray=['item1','item2','item3','item4'];
+// const myArray=['item1','item2','item3','item4'];
 // delete
 // myArray.splice(1,1);
 // console.log(myArray);
-// const deletedItem=myArray.splice(1,2);
+// const deletedItem=myArray.splice(1,2); // applicable on new array if above 2 lines are executed [ 'item1', 'item3', 'item4' ]
 // console.log("deleted item",deletedItem);
 // insert
-myArray.splice(1,0,'inserted item');
-console.log(myArray);
+// myArray.splice(1,0,'inserted item');
+// console.log(myArray);
 // insert and delete together
-const deletedItem=myArray.splice(1,2,"inserted item","inserted item2");
-console.log("deleted item",deletedItem);
-console.log(myArray);
+// const deletedItem=myArray.splice(1,2,"inserted item","inserted item2");
+// console.log("deleted item",deletedItem);
+// console.log(myArray);
 
 // forEach , sort , filter , map , find , Every , Some , fill , splice
 

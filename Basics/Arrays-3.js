@@ -42,8 +42,8 @@
 // console.log("value is num1 is",num1);
 // console.log("value is num1 is",num2);
 
-// reference types
-// array
+// reference types - (),{},[]
+// eg: array
 // let array1=["item1","item2"];
 // let array2=array1;
 // console.log("array1",array1);
@@ -73,7 +73,7 @@
 //     fruits2.push(fruits[i].toUppercase());
 // }
 // console.log(fruits2);
-// const fruits=["apple","mango"]; //preferable
+// const fruits=["apple","mango"]; //preferable <- constant array but we can manipulate it using array methods instead of using let
 // // let fruits=["apple","mango"];
 // // fruits=["grapes","pineapple"];
 // fruits.push("banana");
@@ -105,14 +105,16 @@
 // }
 // console.log(fruits2);
 
-// array destructuring
+// array destructuring (variables <- array values)
 // const myArray=["value1","value2","value3","value4"];
-// // let myVar1=myArray[0];
-// // let myVar2=myArray[1];
-// // let [myVar1,myVar2]=myArray;
-// // let [myVar1, ,myVar2]=myArray;
-// // let myNewArray=myArray.slice(2);
-// let [myVar1,myVar2,...myNewArray]=myArray;
+// let myVar1=myArray[0];    // value1
+// let myVar2=myArray[1];    // value2
+// let [myVar1,myVar2]=myArray;       // value1 and value2
+// let [myVar1, ,myVar2]=myArray;     // value1 and value3
+// let myNewArray=myArray.slice(2);   // value3 and value4
+
+// let [myVar1,myVar2,...myNewArray]=myArray; // destructuring
+
 // console.log("value of myVar1",myVar1);
 // console.log("value of myVar2",myVar2);
 // console.log(myNewArray);

@@ -20,11 +20,11 @@
 // (2)Create functions to create multiple objects
 // function (that function create object)
 // 2.) add key value pair
-// 3.) object ko return krega
+// 3.) function object return krega
 
-// Template -> Object
+// Template -> Object // Class
 // function createUser(firstName,lastName,email,age,address){
-//     const user={};
+//     const user={}; //user object
 //     user.firstName=firstName;
 //     user.lastName=lastName;
 //     user.email=email;
@@ -64,8 +64,8 @@
 //     user.email=email;
 //     user.age=age;
 //     user.address=address;
-//     user.about=userMethods.about; //
-//     user.is18=userMethods.is18; //
+//     user.about=userMethods.about; // taking reference from above object
+//     user.is18=userMethods.is18; // taking reference from above object
 //     return user;
 // }
 // const user1=createUser('anushka','murade','anushkamurade@gmail.com',19,'xyz');
@@ -82,12 +82,12 @@
 //     key2:"value2",
 // }
 
-// // official ecmascript documentation
-// // [[prototype]]
-// // (__proto__===[[prototype]]) and (prototype) are different
+// official ecmascript documentation
+// [[prototype]]
+// (__proto__===[[prototype]]) and (prototype) are different
 
-// // const obj2={};
-// // there is one more way to create an empty object
+// const obj2={};
+// there is one more way to create an empty object
 // const obj2=Object.create(obj1); //{}
 // console.log(obj2);
 // obj2.key3="value3";
@@ -123,7 +123,7 @@
 // console.log(user2.about());
 
 
-// In Javascript, function ===> function + object
+// In Javascript, function ===> function + empty object {}
 // function hello(){
 //     console.log("hello world");
 // }
@@ -145,7 +145,6 @@
 //     console.log("protoype is not present");
 // }
 
-
 // // prototype
 // hello.prototype.abc="abc";
 // hello.prototype.xyz="xyz";
@@ -166,12 +165,14 @@
 //     user.address=address;
 //     return user;
 // }
+// console.log(createUser.prototype); // {}
 // createUser.prototype.about=function(){
 //     return `${this.firstName} is ${this.age} years old.`;
 // }
 // createUser.prototype.is18=function(){
 //     return this.age>=18;
 // }
+// console.log(createUser.prototype); // { about: [Function (anonymous)], is18: [Function (anonymous)] }
 // const user1=createUser('anushka','murade','anushkamurade@gmail.com',19,'xyz');
 // const user2=createUser('xyz','abc','xyz@gmail.com',19,'xyz');
 // const user3=createUser('abc','xyz','abc@gmail.com',19,'abc');
@@ -183,7 +184,7 @@
 // return {}
 // links proto to prototype
 
-// // constructor function
+// constructor function
 // function CreateUser(firstName,lastName,email,age,address){
 //     // const user=Object.create(createUser.prototype); //{}
 //     // user.firstName=firstName;

@@ -83,32 +83,3 @@
 // const t=sectionTodo.getBoundingClientRect().top;
 
 // Refer "DOM_p2_4.js" for DOM Tree traversing / manipulation
-
-// Refer "Events_p2_5.js" for Events
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

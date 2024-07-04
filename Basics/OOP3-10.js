@@ -21,14 +21,14 @@
 // console.log(animal1);
 // console.log(animal1.eat());
 
-// // subclass/derived class
+// subclass/derived class
 // class Dog extends Animal{
 // }
 // const tommy=new Dog("tommy",3);
 // console.log(tommy.isCute());
 
-// // Same method in subclass - confusing
-// // super
+// Same method in subclass 
+// super
 // class Animal{
 //     constructor(name,age){
 //         this.name=name;
@@ -46,17 +46,17 @@
 // }
 // const animal1=new Animal("tom",2);
 
-// // object/instance
+// // // object/instance
 // class Dog extends Animal{
 //     constructor(name,age,speed){
-//         super(name,age);
+//         super(name,age); // name,age inherited properties
 //         this.speed=speed;
 //     }
 //     run(){
 //         return `${this.name} is running at ${this.speed} kmph`;
 //     }
 //     eat(){
-//         return `${this.name} is eati'n`;
+//         return `${this.name} is eating`;
 //     }
 // }
 // const tommy=new Dog("tommy",3,45);
@@ -81,7 +81,7 @@
 // }
 // const person1=new Person("anu","murade",19);
 // // console.log(person1.fullName());
-// console.log(person1.fullName);
+// console.log(person1.fullName);  
 
 // set
 // class Person{

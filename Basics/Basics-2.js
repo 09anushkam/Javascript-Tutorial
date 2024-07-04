@@ -18,7 +18,7 @@
 //     console.log("odd");
 // }
 
-// false values - "",null,undefined,0
+// falsy values - "",null,undefined,0,document.all,NAN,false
 // let firstName="";
 // if(firstName){
 //     console.log(firstName);
@@ -27,7 +27,7 @@
 //     console.log("firstName is kinda empty");
 // }
 
-// TERNARY OPERATOR/CONDITIONAL OPERATOR
+// TERNARY OPERATOR/CONDITIONAL OPERATOR (conditon ? stmnt 1 : stmnt 2 )
 // let age=15;
 // let drink;
 // if(age>=5){
@@ -145,14 +145,14 @@
 // }
 // console.log(i); //works
 
-// break keyword
+// break keyword - breaks loop
 // for(let i=1;i<=10;i++){
 //     if(i===4){
 //         break;
 //     }console.log(i);
 // }
 
-// continue keyword
+// continue keyword - skips that iteration
 // for(let i=1;i<=10;i++){
 //     if(i===4){
 //         continue;

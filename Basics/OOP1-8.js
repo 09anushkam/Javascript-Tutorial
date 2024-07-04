@@ -1,7 +1,14 @@
 // 8:38:42 - 9:14:06
 // "use strict";
 
+// this === window 
+// check in browser's console
+// console.log(this);
+// console.log(window);
+
 // Methods - function inside object
+// this inside an object is the object
+// this.prop inside of an object is the value of the prop present inside of that object
 // const person={
 //     firstName:"Anushka",
 //     age:8,
@@ -38,17 +45,17 @@
 // person2.about();
 // person3.about();
 
-// note this===window -> true
-// console.log(this);
-// console.log(window);
-
 // function myFunc(){
 //     console.log(this);
 // }
 // window.myFunc();
 // myFunc(); //"use strict"-> it will give undefined otherwise it will give window object
 
+
 // call,apply,bind
+// call : Accepts arguments individually as a comma-separated list. 
+// apply : Accepts arguments as an array or array-like object. 
+// bind : Can preset arguments when creating the new function, but additional arguments can be passed when the new function is invoked.
 
 // call - using method of one object to use them with the values of another object 
 // const user1={
@@ -81,10 +88,6 @@
 // user1.about.call(user2,"drawing");
 // user1.about.call(user2,"drawing","xyz");
 
-
-// function about(hobby,favMusician){
-//     console.log(this.firstName,this.age,hobby,favMusician);
-// }
 // const user1={
 //     firstName:"Anushka",
 //     age:19,
@@ -96,10 +99,12 @@
 //     firstName:"Anu",
 //     age:20,
 // }
-// // apply
+
+// apply-prints below line directly
 // user1.about.apply(user2, ["guitar", "abc"]);
-// // bind-doesnt prints directly
-// const func=about.bind(user1,"guitar","xyz");
+
+// bind-doesn't prints directly
+// const func=user1.about.bind(user2,"guitar","xyz");
 // func();
 
 // don't do this mistake
@@ -127,12 +132,14 @@
 // user1.about();
 // user1.about(user1);
 // user1.about.call(user1);
+// const myFunc=user1.about.bind(user1);
+// myFunc();
 
-// short syntax for method
+// shorthand syntax for method
 // const user1={
 //     firstName:"Anushka",
 //     age:8,
-//     about(){
+//     about(){  //shorthand syntax for method
 //         console.log(this.firstName,this.age);
 //     }
 // };
