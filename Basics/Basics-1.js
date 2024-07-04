@@ -129,33 +129,3 @@
 // console.log(num1===num2); // === - cares about value and datatype both
 // console.log(num1!=num2); // != - cares about value only
 // console.log(num1!==num2); // !== - cares about value and datatype both
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
